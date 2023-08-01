@@ -1,0 +1,391 @@
+@font-face {
+    font-family: calendas;
+    src: url(Calendas/Calendas.otf);
+}
+@font-face {
+    font-family: calendasBold;
+    src: url(Calendas/Calendas-Bold.otf);
+}
+@font-face {
+    font-family: calendasItalic;
+    src: url(Calendas/Calendas-Italic.otf);
+}
+
+:root {
+/* Colors */
+    --lightGreen: #718c5e;
+    --darkGreen: #42731f;
+    --text: #000000;
+    --textGreen: #75a653;
+    --textGrey: #555555;
+    --grey: #d7d7d7;
+
+/* Fonts
+    --main: 'verdana, helvetica';
+    --headings: 'calendas, times new roman'*/
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: verdana, helvetica, sans-serif;
+}
+
+header, nav, main, footer {
+    display: block;
+}
+
+#socialsTop {
+    display: flex;
+    justify-content: right;
+    padding-right: 2px;
+    width: 100%;
+    height: 1em;
+    background-color: var(--lightGreen);
+}
+
+#socialsTop ul {
+    list-style-type: none;
+}
+
+#socialsTop ul li {
+    float: right;
+    padding-left: 5px;
+
+}
+
+#socialsTop ul li img {
+    height: 15px;
+    width: 15px;
+}
+
+#navContainer {
+    display: flex;
+    background-color: var(--grey);
+    padding: 7px 0 7px 0;
+}
+
+#navContainer img {
+    margin-left: -15px;
+}
+
+#navContainer ul {
+    display: flex;
+    width: 60%;
+    min-width: 500px;
+    margin-left: 90px;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navContainer ul li {
+    display: inline;
+    justify-content: space-between;
+}
+
+#navContainer ul li a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: verdana, helvetica, sans-serif;
+    font-weight: bold;
+    font-size: .95em;
+}
+
+#slideshow {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+#aboutUsFlex {
+    display: flex;
+    margin: 10px 60px 10px 60px;
+    justify-content: space-around;
+}
+
+#aboutUsFlex img {
+    box-shadow: 7px 7px 15px #aeaeae;
+    border: 1px #aeaeae solid;
+}
+
+#donateNow {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 5em;
+    margin-bottom: 1em;
+}
+
+#donateNow button{
+    height: 2em;
+    width: 500px;
+    background-color: var(--darkGreen);
+    border: none;
+    color: white;
+    letter-spacing: 4px;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 7px 7px 15px #aeaeae;
+}
+
+hr {
+    margin: 50px 50px 20px 50px;
+    border: none;
+    height: 2px;
+    background-color: var(--textGrey);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: calendasBold, "times new roman", serif;
+}
+
+p {
+    text-align: center;
+    margin: 0 50px 60px 50px;
+    font-weight: bold;
+    font-family: verdana, helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+
+#whatsNew {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 315px;
+    margin-top: 80px;
+    background-image: url(images/Arr-Logo-Pattern2.gif);
+    background-color: var(--lightGreen);
+}
+
+.newsBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    background-color: white;
+    height: 250px;
+    width: 300px;
+    font-family: verdana, helvetica;
+}
+
+.newsBox h2 {
+    margin: 25px auto;
+    text-align: center;
+    color: var(--textGrey);
+    font-family: calendas, 'times new roman', serif;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.newsBox ul {
+    list-style-type: none;
+}
+
+.newsBox ul li {
+    text-align: left;
+    color: var(--textGrey);
+    font-size: .80em;
+    font-family: verdana, helvetica, sans-serif;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.newsBox ul li:last-of-type {
+    padding-bottom: 0;
+}
+
+.indent {
+    position: relative;
+    left: 85px;
+    font-family: verdana, helvetica, sans-serif;
+}
+
+.newsBox button {
+    background-color: white;
+    color: var(--textGrey);
+    border: none;
+    font-family: verdana, helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 25px;
+}
+
+#donationsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#donationsContainer h2 {
+    margin: 50px auto 30px auto;
+    font-size: 2em;
+    letter-spacing: 3px;
+}
+
+#donationsSingle {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+#donationsSingle figure figcaption {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: .90em;
+    font-weight: bold;
+}
+
+#donationsOptions {
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    justify-content: space-around;
+}
+
+footer {
+    background-color: var(--grey);
+    width: 100%;
+    height: 295px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+footer hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: none;
+    height: 2px;
+    background-color: var(--textGrey);
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+    width: 100%;
+    padding: 25px 40px 0 40px;
+}
+
+footer nav ul {
+    list-style-type: none;
+    height: 100%;
+    width: 25%;
+}
+
+footer nav ul li {
+    padding-left: 40%;
+}
+
+footer nav ul li:first-of-type {
+    font-weight: bold;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    font-size: .70em;
+    font-weight: bold;
+    color: black;
+}
+
+#contactInfo {
+    width: 100%;
+    height: 140px;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--grey);
+}
+
+#contactInfo p:first-of-type {
+    text-align: left;
+    font-size: .60em;
+    letter-spacing: 0;
+    margin-left: 15px;
+    margin-bottom: 0;
+    width: 400px;
+}
+
+#copyright {
+    font-weight: bold;
+    font-style: italic;
+    font-size: .60em;
+    letter-spacing: 0;
+    height: 14px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+
+#backToTop {
+    background-color: var(--lightGreen);
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: .90em;
+    float: left;
+    margin-top: 80px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#pirate {
+    height: 60px;
+    width: 85px;
+    margin-left: 100px;
+}
+
+#socialsBottomContainer {
+    height: 130px;
+    width: 250px;
+    float: right;
+}
+
+#socialIcons {
+    display: flex;
+    justify-content: right;
+    width: 180px;
+    height: 30px;
+}
+
+#socialIcons img {
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+}
+
+#iconsBottom {
+    float: right;
+    height: 100%;
+}
+
+nav a:hover {
+    color: var(--textGreen);
+}
+
+#navContainer ul li a:hover {
+    color: var(--textGreen);
+}
+
+#navContainer ul li:last-of-type a {
+    color: var(--textGreen);
+}
+
+#navContainer ul li:last-of-type a:hover {
+    color: black;
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Trails Resort :: Reservations</title>
+    <link rel="stylesheet" href="pacific.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"></script>
+    <script>
+        function validateForm() {
+            if (document.forms[0].myEmail.value == "") {
+                alert("Please enter an e-mail address.");
+                return false;
+            }//end if statement
+            return true;
+        }//end function validateForm
+        $(document).ready(function() {
+            $("form").validate();
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Pacific Trails Resort</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="yurts.html">Yurts</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Reservations at Pacific Trails</h2>
+            <h3>Contact Us</h3>
+            <p>Required information is marked with an asterisk (*).</p>
+            <form action="https://webdevbasics.net/scripts/pacific.php" method="post" onsubmit="return validateForm();">
+                <label for="myFName">First Name:</label>
+                    <input type="text" name="myFName" id="myFName">
+                <label for="myLName">Last Name:</label>
+                    <input type="text" name="myLName" id="myLName">
+                <label for="myEmail">* E-mail:</label>
+                    <input type="email" name="myEmail" id="myEmail" class="required email">
+                <label for="myPhone">Phone:</label>
+                    <input type="tel" name="myPhone" id="myPhone">
+                <label for="myDate">Arrival Date:</label>
+                    <input type="date" name="myDate" id="myDate">
+                <label for="nights">Nights:</label>
+                    <input type="number" min="1" max="14" name="nights" id="nights">
+                <label for="myComments">Comments:</label>
+                    <textarea name="myComments" id="myComments" cols="20" rows="2"></textarea>
+                <input type="submit" id="mySubmit">
+            </form>
+        </main>
+        <footer>
+            Copyright &copy; 2018 Pacific Trails Resort <br>
+            <a href="mailto:">cameron@mikel.com</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Practice</title>
+        <meta charset="utf-8">
+        <script>
+            function validateForm() {
+                if (document.forms[0].userName.value == "") {
+                    alert("Name field cannot be empty.");
+                    return false;
+                }//end of if statement
+                alert("Name and age are valid.");
+                return true;
+            }//end of function
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript Form Handling</h1>
+        <form method="post" action="https://webdevbasics.net/scripts/demo.php" onsubmit="return validateForm();">
+            <label>Name: <input type="text" name="userName"></label>
+            <br>
+            <input type="submit" value="Send information">
+        </form>
+    </body>
+</html>
